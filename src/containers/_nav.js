@@ -14,12 +14,12 @@ export default [
       },
       {
         _name: 'CSidebarNavDropdown',
-        name: 'Taxi Booking',
+        name: 'Train Booking',
         route: '/taxiBooking',
-        icon: 'cil-taxi',
+        icon: 'cil-locomotive',
         items: [
           {
-            name: 'Trip Booking',
+            name: 'Ticket Booking',
             to: '/taxiBooking/trip-booking'
           },
           {

@@ -1,34 +1,30 @@
 <template>
   <div>
     <CRow>
-      <CCol sm="2" md="2">
-        <CWidgetProgressIcon header="87.500" text="•	Number of live trips " color="gradient-info" inverse>
-          <CIcon name="cil-car-alt" height="36" />
-        </CWidgetProgressIcon>
-      </CCol>
+   
       <CCol sm="2" md="2">
         <CWidgetProgressIcon header="385" text="•	Number of completed trips" color="gradient-success" inverse>
           <CIcon name="cil-garage" height="36" />
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="2" md="2">
-        <CWidgetProgressIcon header="1238" text="•	Number of cancelled trips" color="gradient-warning" inverse>
+        <CWidgetProgressIcon header="1238" text="•	Number of cancelled trips" color="gradient-danger" inverse>
           <CIcon name="cil-ban" height="36" />
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="2" md="2">
-        <CWidgetProgressIcon header="28%" text="•	Number of free vehicles" color="gradient-primary" inverse>
+        <CWidgetProgressIcon header="28%" text="•	Number of free seats" color="gradient-warning" inverse>
           <CIcon name="cil-group" height="36" />
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="2" md="2">
-        <CWidgetProgressIcon header="5:34:11" text="•	Number of disabled vehicle" color="gradient-danger" inverse>
-          <CIcon name="cil-user-x" height="36" />
+        <CWidgetProgressIcon header="5911" text="•	Number of booked seats" color="gradient-primary" inverse>
+          <CIcon name="cil-check" height="36" />
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="2" md="2">
-        <CWidgetProgressIcon header="972" text="•	Number of active trips" color="gradient-info" inverse>
-          <CIcon name="cil-graph" height="36" />
+        <CWidgetProgressIcon header="972" text="•	Number of onging trips" color="gradient-info" inverse>
+          <CIcon name="cil-locomotive" height="36" />
           <!-- cil-taxi -->
 
         </CWidgetProgressIcon>

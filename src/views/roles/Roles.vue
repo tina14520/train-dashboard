@@ -84,8 +84,8 @@ export default {
   // name: 'ButtonGroups',
   data(){
     var dataSource =  [
-        { id: 1, name: 'Taxi Booking', hasChild: true, expanded: true },
-        { id: 2, pid: 1, name: 'Trip Booking', isChecked: true },
+        { id: 1, name: 'Train Booking', hasChild: true, expanded: true },
+        { id: 2, pid: 1, name: 'Ticket Booking', isChecked: true },
         { id: 3, pid: 1, name: 'Trip Tracking' },
         { id: 4, pid: 1, name: 'Current Status' },
         { id: 6, pid: 1, name: 'Follow Up', isChecked: true },

@@ -1,5 +1,6 @@
 <template>
-  <div class="c-app flex-row align-items-center">
+<div>
+  <div  :style="{'background-image':'url(https://images.adsttc.com/media/images/614d/91a9/f91c/81fb/f800/00df/slideshow/ZHA_Vilnius_Connect_render_by_Negativ_(2).jpg)'}" class="c-app flex-row align-items-center">
     <CContainer>
       <CRow class="justify-content-center">
         <CCol md="5">
@@ -7,7 +8,7 @@
             <CCard >
               <CCardBody>
                 <CForm @submit.prevent="login">
-                  <h1>Login</h1>
+                  <h1>Welcome Back</h1>
                   <p class="text-muted">Sign In to your account</p>
                   <span class="input-group-text" >
                     <CIcon name="cil-user"
@@ -36,16 +37,14 @@
                   >
                   </span>
                   <p></p>
-                  <CRow>
-                    <CCol col="6" class="text-left">
+                  <CRow  class="btn">
                       <CButton
-                        color="primary"
+                        color="warning"
                         class="px-4"
                         type="submit"
                         :disabled="loadingLogin"
                         >Login</CButton
                       >
-                    </CCol>
                     <!-- <CCol col="6" class="text-right">
                       <CButton color="link" class="px-0"
                         >Forgot password?</CButton
@@ -74,6 +73,7 @@
       </CRow>
     </CContainer>
   </div>
+</div>
 </template>
 
 <script>
@@ -146,5 +146,12 @@ export default {
 }
 .input-group-text{
  text-align: left;
+}
+.px-4{
+color:black
+}
+.btn{
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 </style>

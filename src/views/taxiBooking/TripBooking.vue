@@ -1,64 +1,51 @@
 <template>
-  <!-- <CCardHeader>
-        <h2>Routes Google Maps</h2> 
-      </CCardHeader> -->
-  <CCol>
-    <CCard class="bcard">
-      <CCardHeader> <strong>Trip</strong> Booking </CCardHeader>
-      <CCardBody>
-        <input class="c" type="text" placeholder="Client Name" />
-        <input class="c" type="phone" placeholder="Client Phone Number" />
-        <!-- <GmapAutocomplete
-          class="ma"
-          placeholder="Start point"
-          @place_changed="setPlace"
-          @change="addMarker(0)"
-        />
-        <GmapAutocomplete
-          class="ma"
-          placeholder="End point"
-          @place_changed="setPlace"
-          @change="addMarker(1)"
-        /> -->
-      </CCardBody>
-      <CCardFooter>
-        <CButton type="submit" size="sm" color="success"
-          ><CIcon name="cil-check-circle" />Search for Drivers</CButton
-        >
-      </CCardFooter>
-      <h2>Autocomplete Google Maps</h2>
-      <GmapAutocomplete @place_changed="setPlace" :bounds="center"/>
-      <button class="btn" @click="addMarker">Add</button>
-      <GmapMap
-        :center="center"
-        :zoom="12"
-        style="width: 100%; height: 400px; margin-top: 20px"
-        @click="addMark"
-      >
-        <GmapMarker
-          :key="index"
-          v-for="(m, index) in markers"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="center = m.position"
-        />
-        <!-- <GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        @click="centerPosition(m.position)"
-      /> -->
-      </GmapMap>
-    </CCard>
-  </CCol>
+ <FormulateForm
+  v-model="fields"
+>
+  <FormulateInput
+    type="text"
+    name="name"
+    label="Your name"
+  />
+  <FormulateInput
+    type="group"
+    name="address"
+  >
+    <FormulateInput
+      type="text"
+      name="address"
+      label="Street address"
+    />
+    <FormulateInput
+      type="text"
+      name="city"
+      label="City"
+    />
+    <FormulateInput
+      type="select"
+      name="state"
+      label="State"
+      :options="{VA: 'Virginia', CA: 'California', NY: 'New York'}"
+    />
+  </FormulateInput>
+</FormulateForm>
 </template>
 <script>
 import DirectionsRenderer from "./DirectionsRenderer";
+import { de } from '@braid/vue-formulate-i18n'
+
+// import {FormulateForm,FormulateInput} from '@braid/vue-formulate'
 export default {
   name: "StandardButtons",
+   plugins: [de],
+  locale: 'de',
+  rules: {
+    foobar: ({ value }) => ['foo', 'bar'].includes(value)
+  },
   components: {
     DirectionsRenderer,
+    // FormulateForm,
+    // FormulateInput
   },
   data() {
     return {
