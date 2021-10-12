@@ -1,6 +1,5 @@
 <template>
-<div>
-  <div  :style="{'background-image':'url(https://images.adsttc.com/media/images/614d/91a9/f91c/81fb/f800/00df/slideshow/ZHA_Vilnius_Connect_render_by_Negativ_(2).jpg)'}" class="c-app flex-row align-items-center">
+  <div class="c-app flex-row align-items-center">
     <CContainer>
       <CRow class="justify-content-center">
         <CCol md="5">
@@ -73,7 +72,6 @@
       </CRow>
     </CContainer>
   </div>
-</div>
 </template>
 
 <script>
