@@ -1,0 +1,76 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+.card-header:not(.content-center) > .c-icon:first-child {
+  margin-right: 0.1rem;
+  margin-top: 0.1rem;
+  vertical-align: top;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 1.2rem;
+}
+.c-sidebar-brand{
+  display: none;
+}
+// .c-main{
+//   background-color: white;
+// }
+// .c-sidebar-nav{
+//   background-color: black;
+// }
+// .c-sidebar-minimizer.d-md-down-none{
+//   background-color:black;
+// }
+
+.c-header.c-header-fixed {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-control {
+  display: none;
+}
+.table-sm th, .table-sm td {
+  padding: 0.3rem;
+  display: none;
+}
+.c-footer {
+  display: none;
+}
+// .container-fluid .container-sm .container-md .container-lg .container-xl .container-xxl {
+//    padding-right: 0px; 
+//    padding-left: 0px; 
+// }
+.container-fluid{
+  padding: 0 0 0 0;
+  // padding-left: 0px;
+}
+.col{
+margin: 0 0 0 0;
+padding:0;
+}
+.nav-pills .nav-link.active .nav-pills .show  .nav-link {
+  color: #fff;
+  background-color: #3C4B64;
+  margin: 0rem;
+  padding: 1rem;
+}
+.nav-link {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #3C4B64;
+}
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check {
+  background-color: #e3e016;
+  border-color: transparent;
+  color: #fff;
+}
