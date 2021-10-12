@@ -1,51 +1,12 @@
 <template>
- <FormulateForm
-  v-model="fields"
->
-  <FormulateInput
-    type="text"
-    name="name"
-    label="Your name"
-  />
-  <FormulateInput
-    type="group"
-    name="address"
-  >
-    <FormulateInput
-      type="text"
-      name="address"
-      label="Street address"
-    />
-    <FormulateInput
-      type="text"
-      name="city"
-      label="City"
-    />
-    <FormulateInput
-      type="select"
-      name="state"
-      label="State"
-      :options="{VA: 'Virginia', CA: 'California', NY: 'New York'}"
-    />
-  </FormulateInput>
-</FormulateForm>
+        <h2>Ticket Book</h2>
 </template>
 <script>
 import DirectionsRenderer from "./DirectionsRenderer";
-import { de } from '@braid/vue-formulate-i18n'
-
-// import {FormulateForm,FormulateInput} from '@braid/vue-formulate'
 export default {
   name: "StandardButtons",
-   plugins: [de],
-  locale: 'de',
-  rules: {
-    foobar: ({ value }) => ['foo', 'bar'].includes(value)
-  },
   components: {
     DirectionsRenderer,
-    // FormulateForm,
-    // FormulateInput
   },
   data() {
     return {
